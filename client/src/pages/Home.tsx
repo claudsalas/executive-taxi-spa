@@ -107,7 +107,7 @@ export default function Home() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8 border-t border-white/20">
+            <div className="grid grid-cols-2 gap-4 pt-8 border-t border-white/20">
               <div>
                 <p className="text-primary font-bold text-2xl">24h</p>
                 <p className="text-gray-300 text-sm">{t('hero.stat1Label')}</p>
@@ -115,10 +115,6 @@ export default function Home() {
               <div>
                 <p className="text-primary font-bold text-2xl">100%</p>
                 <p className="text-gray-300 text-sm">{t('hero.stat2Label')}</p>
-              </div>
-              <div className="col-span-2 md:col-span-1">
-                <p className="text-primary font-bold text-2xl">5⭐</p>
-                <p className="text-gray-300 text-sm">{t('hero.stat3Label')}</p>
               </div>
             </div>
           </div>
@@ -131,7 +127,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <img 
-                src="/images/PHOTO-2025-10-27-19-01-33.jpg" 
+                src="/images/driver_photo_blurred.png" 
                 alt="Wagner, motorista profissional" 
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />

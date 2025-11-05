@@ -68,3 +68,9 @@
 
 ## Bug Fixes (v4)
 - [x] Fix badge component overflow on mobile
+
+## Bug Fixes (v5)
+- [x] Obscure license plate in "Quem Sou Eu" photo
+- [x] Fix "100% Profissional" layout overflow
+- [x] Remove star emoji from stats section
+- [x] Fix time available display
