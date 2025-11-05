@@ -49,7 +49,7 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/PHOTO-2025-10-27-19-01-32.jpg" 
+            src="/images/hero_car_blurred.png" 
             alt="Wagner Transporte Executivo" 
             className="w-full h-full object-cover"
           />
@@ -229,7 +229,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
             <div>
               <img 
-                src="/images/PHOTO-2025-10-27-19-01-324.jpg" 
+                src="/images/car_sunset_blurred.png" 
                 alt="Toyota Corolla Cross ao pôr do sol" 
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
@@ -273,12 +273,12 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="/images/PHOTO-2025-10-27-19-01-323.jpg" 
+              src="/images/car_rio_blurred.png" 
               alt="Corolla Cross em vista lateral" 
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
             />
             <img 
-              src="/images/PHOTO-2025-10-27-19-01-31.jpg" 
+              src="/images/car_side_blurred.png" 
               alt="Corolla Cross com Cristo Redentor" 
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
             />

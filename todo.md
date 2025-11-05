@@ -55,3 +55,4 @@
 - [x] Simplify and streamline layout for better focus
 - [x] Add sticky/floating CTA for mobile
 - [x] Improve visual hierarchy
+- [x] Remove/obscure license plates from vehicle images
