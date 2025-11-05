@@ -65,3 +65,6 @@
 - [x] Translate all content to English
 - [x] Persist language preference in localStorage
 - [x] Test all language switches
+
+## Bug Fixes (v4)
+- [x] Fix badge component overflow on mobile
