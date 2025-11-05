@@ -1,10 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Shield, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSelector } from "@/components/LanguageSelector";
 
 export default function Home() {
+  const { t } = useLanguage();
   const whatsappLink = "https://wa.me/5511977377841?text=Olá%20Wagner,%20gostaria%20de%20solicitar%20um%20transfer%20executivo.";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const services = [
+    { name: t('services.service1'), desc: t('services.service1Desc') },
+    { name: t('services.service2'), desc: t('services.service2Desc') },
+    { name: t('services.service3'), desc: t('services.service3Desc') },
+    { name: t('services.service4'), desc: t('services.service4Desc') },
+    { name: t('services.service5'), desc: t('services.service5Desc') },
+    { name: t('services.service6'), desc: t('services.service6Desc') },
+  ];
 
   return (
     <div className="min-h-screen bg-white text-foreground overflow-x-hidden">
@@ -13,7 +25,7 @@ export default function Home() {
         <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="block">
           <Button size="lg" className="w-full bg-white text-primary hover:bg-gray-100 font-bold text-lg h-14">
             <Phone className="w-6 h-6 mr-2" />
-            Solicitar Transfer Agora
+            {t('hero.cta1')}
           </Button>
         </a>
       </div>
@@ -27,19 +39,25 @@ export default function Home() {
             </div>
             <div className="hidden sm:block">
               <p className="font-bold text-sm text-foreground">Wagner</p>
-              <p className="text-xs text-primary font-semibold">Motorista Executivo</p>
+              <p className="text-xs text-primary font-semibold">{t('hero.badge')}</p>
             </div>
           </div>
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 items-center">
             <a href="#servicos" className="text-sm font-medium hover:text-primary transition">
-              Destinos
+              {t('nav.destinations')}
             </a>
             <a href="#veiculo" className="text-sm font-medium hover:text-primary transition">
-              Veículo
+              {t('nav.vehicle')}
             </a>
             <a href="#contato" className="text-sm font-medium hover:text-primary transition">
-              Contato
+              {t('nav.contact')}
             </a>
+            <div className="border-l border-gray-200 pl-6">
+              <LanguageSelector />
+            </div>
+          </div>
+          <div className="md:hidden">
+            <LanguageSelector />
           </div>
         </div>
       </nav>
@@ -61,28 +79,28 @@ export default function Home() {
           <div className="max-w-2xl">
             <div className="mb-6">
               <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                Motorista Executivo Profissional
+                {t('hero.badge')}
               </span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black text-white mb-4 leading-tight">
-              Sua Viagem com <span className="text-primary">Conforto</span> e <span className="text-primary">Segurança</span>
+              {t('hero.title')} <span className="text-primary">{t('hero.titleHighlight1')}</span> e <span className="text-primary">{t('hero.titleHighlight2')}</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-xl">
-              Transfers executivos profissionais para seus compromissos importantes. Pontualidade, discrição e conforto garantidos.
+              {t('hero.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold text-lg h-14 px-8">
                   <Phone className="w-6 h-6 mr-2" />
-                  Agende Agora
+                  {t('hero.cta1')}
                 </Button>
               </a>
               <a href="#servicos">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white/10 font-bold text-lg h-14 px-8">
-                  Conheça Meus Serviços
+                  {t('hero.cta2')}
                   <ChevronDown className="w-5 h-5 ml-2" />
                 </Button>
               </a>
@@ -92,15 +110,15 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8 border-t border-white/20">
               <div>
                 <p className="text-primary font-bold text-2xl">24h</p>
-                <p className="text-gray-300 text-sm">Disponível</p>
+                <p className="text-gray-300 text-sm">{t('hero.stat1Label')}</p>
               </div>
               <div>
                 <p className="text-primary font-bold text-2xl">100%</p>
-                <p className="text-gray-300 text-sm">Profissional</p>
+                <p className="text-gray-300 text-sm">{t('hero.stat2Label')}</p>
               </div>
               <div className="col-span-2 md:col-span-1">
                 <p className="text-primary font-bold text-2xl">5⭐</p>
-                <p className="text-gray-300 text-sm">Confiável</p>
+                <p className="text-gray-300 text-sm">{t('hero.stat3Label')}</p>
               </div>
             </div>
           </div>
@@ -120,10 +138,10 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-4xl md:text-5xl font-black mb-6 text-foreground">
-                Quem Sou Eu
+                {t('about.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Sou Wagner, motorista executivo profissional dedicado a oferecer a melhor experiência de transporte para seus compromissos importantes. Com anos de experiência, garanto segurança, pontualidade e discrição em cada viagem.
+                {t('about.description')}
               </p>
               
               <div className="space-y-4 mb-8">
@@ -132,8 +150,8 @@ export default function Home() {
                     <Shield className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-1">Segurança Garantida</h3>
-                    <p className="text-gray-600 text-sm">Motorista responsável e atento a cada detalhe</p>
+                    <h3 className="font-bold text-foreground mb-1">{t('about.feature1Title')}</h3>
+                    <p className="text-gray-600 text-sm">{t('about.feature1Desc')}</p>
                   </div>
                 </div>
                 
@@ -142,8 +160,8 @@ export default function Home() {
                     <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-1">Pontualidade Absoluta</h3>
-                    <p className="text-gray-600 text-sm">Sempre no horário, sem exceções ou atrasos</p>
+                    <h3 className="font-bold text-foreground mb-1">{t('about.feature2Title')}</h3>
+                    <p className="text-gray-600 text-sm">{t('about.feature2Desc')}</p>
                   </div>
                 </div>
 
@@ -152,8 +170,8 @@ export default function Home() {
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-1">Profissionalismo Total</h3>
-                    <p className="text-gray-600 text-sm">Atitude executiva e discrição em todas as viagens</p>
+                    <h3 className="font-bold text-foreground mb-1">{t('about.feature3Title')}</h3>
+                    <p className="text-gray-600 text-sm">{t('about.feature3Desc')}</p>
                   </div>
                 </div>
               </div>
@@ -161,7 +179,7 @@ export default function Home() {
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold">
                   <Phone className="w-5 h-5 mr-2" />
-                  Converse Comigo
+                  {t('about.cta')}
                 </Button>
               </a>
             </div>
@@ -174,22 +192,15 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4 text-foreground">
-              Destinos Principais
+              {t('services.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Realizo transfers executivos para os principais destinos da região. Viagens personalizadas conforme sua necessidade.
+              {t('services.description')}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: "Ubatuba", desc: "Costa norte paradisíaca" },
-              { name: "Paraty", desc: "Destino histórico e charmoso" },
-              { name: "Angra dos Reis", desc: "Praias e ilhas incríveis" },
-              { name: "Rio de Janeiro", desc: "Cidade maravilhosa" },
-              { name: "Porto Marítimo", desc: "Acesso aos portos da região" },
-              { name: "Aeroportos", desc: "Transfers para aeroportos" }
-            ].map((service, idx) => (
+            {services.map((service, idx) => (
               <div key={idx} className="group bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
@@ -203,11 +214,11 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Seu destino não está listado?</p>
+            <p className="text-gray-600 mb-4">{t('services.customQuestion')}</p>
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
                 <Phone className="w-4 h-4 mr-2" />
-                Solicite um Transfer Personalizado
+                {t('services.customCta')}
               </Button>
             </a>
           </div>
@@ -219,10 +230,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4 text-foreground">
-              Meu Veículo
+              {t('vehicle.title')}
             </h2>
             <p className="text-lg text-gray-600">
-              Toyota Corolla Cross Híbrido - Conforto e Tecnologia
+              {t('vehicle.subtitle')}
             </p>
           </div>
 
@@ -236,35 +247,35 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-3xl md:text-4xl font-black mb-8 text-foreground">
-                Conforto Premium
+                {t('vehicle.sectionTitle')}
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-4">
                   <span className="text-primary font-bold text-2xl flex-shrink-0">✓</span>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Tecnologia Híbrida</h4>
-                    <p className="text-gray-600">Motor híbrido para sustentabilidade e silêncio absoluto</p>
+                    <h4 className="font-bold text-foreground mb-1">{t('vehicle.feature1Title')}</h4>
+                    <p className="text-gray-600">{t('vehicle.feature1Desc')}</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="text-primary font-bold text-2xl flex-shrink-0">✓</span>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Interior Espaçoso</h4>
-                    <p className="text-gray-600">Assentos premium com climatização e conforto total</p>
+                    <h4 className="font-bold text-foreground mb-1">{t('vehicle.feature2Title')}</h4>
+                    <p className="text-gray-600">{t('vehicle.feature2Desc')}</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="text-primary font-bold text-2xl flex-shrink-0">✓</span>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Bagagem Ampla</h4>
-                    <p className="text-gray-600">Porta-malas generoso para suas malas e pertences</p>
+                    <h4 className="font-bold text-foreground mb-1">{t('vehicle.feature3Title')}</h4>
+                    <p className="text-gray-600">{t('vehicle.feature3Desc')}</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <span className="text-primary font-bold text-2xl flex-shrink-0">✓</span>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">Segurança Avançada</h4>
-                    <p className="text-gray-600">Sistemas de segurança de última geração</p>
+                    <h4 className="font-bold text-foreground mb-1">{t('vehicle.feature4Title')}</h4>
+                    <p className="text-gray-600">{t('vehicle.feature4Desc')}</p>
                   </div>
                 </li>
               </ul>
@@ -295,30 +306,30 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-black mb-6">
-              Pronto para sua próxima viagem?
+              {t('cta.title')}
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
-              Entre em contato comigo agora mesmo para agendar seu transfer executivo. Respondo rapidamente!
+              {t('cta.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-gray-100 font-bold text-lg h-14 px-8">
                   <Phone className="w-6 h-6 mr-2" />
-                  WhatsApp: (11) 97737-7841
+                  {t('cta.whatsapp')}
                 </Button>
               </a>
               <a href="mailto:wdstaxi@gmail.com">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white/10 font-bold text-lg h-14 px-8">
-                  E-mail: wdstaxi@gmail.com
+                  {t('cta.email')}
                 </Button>
               </a>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-md mx-auto">
-              <p className="text-sm text-white/80 mb-2">Horário de Atendimento</p>
-              <p className="text-white font-bold text-lg">Segunda a Domingo</p>
-              <p className="text-white/80">Disponível 24 horas para seus transfers</p>
+              <p className="text-sm text-white/80 mb-2">{t('cta.hoursTitle')}</p>
+              <p className="text-white font-bold text-lg">{t('cta.hoursDays')}</p>
+              <p className="text-white/80">{t('cta.hoursAvailability')}</p>
             </div>
           </div>
         </div>
@@ -327,8 +338,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-black/95 text-gray-400 py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="mb-2 font-semibold">© 2025 Wagner Transporte Executivo</p>
-          <p className="text-sm">Motorista Profissional | Conforto e Segurança Garantidos</p>
+          <p className="mb-2 font-semibold">{t('footer.copyright')}</p>
+          <p className="text-sm">{t('footer.tagline')}</p>
         </div>
       </footer>
 

@@ -56,3 +56,12 @@
 - [x] Add sticky/floating CTA for mobile
 - [x] Improve visual hierarchy
 - [x] Remove/obscure license plates from vehicle images
+
+## Multi-Language Support (v3)
+- [x] Create translation files for Portuguese, Spanish, and English
+- [x] Implement language context and hooks
+- [x] Add language selector component
+- [x] Translate all content to Spanish (Latin America)
+- [x] Translate all content to English
+- [x] Persist language preference in localStorage
+- [x] Test all language switches

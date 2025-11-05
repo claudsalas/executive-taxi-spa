@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "destinations": "Destinations",
+    "vehicle": "Vehicle",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Professional Executive Driver",
+    "title": "Your Journey with",
+    "titleHighlight1": "Comfort",
+    "titleHighlight2": "Safety",
+    "description": "Professional executive transfers for your important appointments. Punctuality, discretion and comfort guaranteed.",
+    "cta1": "Book Now",
+    "cta2": "Learn About My Services",
+    "stat1Label": "Available",
+    "stat2Label": "Professional",
+    "stat3Label": "Reliable"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm Wagner, a professional executive driver dedicated to providing the best transportation experience for your important appointments. With years of experience, I guarantee safety, punctuality and discretion on every trip.",
+    "feature1Title": "Safety Guaranteed",
+    "feature1Desc": "Responsible driver attentive to every detail",
+    "feature2Title": "Absolute Punctuality",
+    "feature2Desc": "Always on time, no exceptions or delays",
+    "feature3Title": "Total Professionalism",
+    "feature3Desc": "Executive attitude and discretion on all trips",
+    "cta": "Talk to Me"
+  },
+  "services": {
+    "title": "Main Destinations",
+    "description": "I provide executive transfers to the main destinations in the region. Personalized trips according to your needs.",
+    "service1": "Ubatuba",
+    "service1Desc": "Paradisiacal north coast",
+    "service2": "Paraty",
+    "service2Desc": "Historic and charming destination",
+    "service3": "Angra dos Reis",
+    "service3Desc": "Incredible beaches and islands",
+    "service4": "Rio de Janeiro",
+    "service4Desc": "Wonderful city",
+    "service5": "Maritime Port",
+    "service5Desc": "Access to regional ports",
+    "service6": "Airports",
+    "service6Desc": "Airport transfers",
+    "customQuestion": "Your destination not listed?",
+    "customCta": "Request a Personalized Transfer"
+  },
+  "vehicle": {
+    "title": "My Vehicle",
+    "subtitle": "Toyota Corolla Cross Hybrid - Comfort and Technology",
+    "sectionTitle": "Premium Comfort",
+    "feature1Title": "Hybrid Technology",
+    "feature1Desc": "Hybrid engine for sustainability and absolute silence",
+    "feature2Title": "Spacious Interior",
+    "feature2Desc": "Premium seats with air conditioning and total comfort",
+    "feature3Title": "Ample Luggage",
+    "feature3Desc": "Generous trunk for your luggage and belongings",
+    "feature4Title": "Advanced Safety",
+    "feature4Desc": "State-of-the-art safety systems"
+  },
+  "cta": {
+    "title": "Ready for your next trip?",
+    "description": "Contact me now to book your executive transfer. I respond quickly!",
+    "whatsapp": "WhatsApp: (11) 97737-7841",
+    "email": "Email: wdstaxi@gmail.com",
+    "hoursTitle": "Business Hours",
+    "hoursDays": "Monday to Sunday",
+    "hoursAvailability": "Available 24 hours for your transfers"
+  },
+  "footer": {
+    "copyright": "© 2025 Wagner Executive Transport",
+    "tagline": "Professional Driver | Comfort and Safety Guaranteed"
+  }
+}

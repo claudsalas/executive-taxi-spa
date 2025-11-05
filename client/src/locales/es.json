@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "destinations": "Destinos",
+    "vehicle": "Vehículo",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Conductor Ejecutivo Profesional",
+    "title": "Tu Viaje con",
+    "titleHighlight1": "Comodidad",
+    "titleHighlight2": "Seguridad",
+    "description": "Transfers ejecutivos profesionales para tus compromisos importantes. Puntualidad, discreción y comodidad garantizados.",
+    "cta1": "Reserva Ahora",
+    "cta2": "Conoce Mis Servicios",
+    "stat1Label": "Disponible",
+    "stat2Label": "Profesional",
+    "stat3Label": "Confiable"
+  },
+  "about": {
+    "title": "Quién Soy",
+    "description": "Soy Wagner, conductor ejecutivo profesional dedicado a ofrecer la mejor experiencia de transporte para tus compromisos importantes. Con años de experiencia, garantizo seguridad, puntualidad y discreción en cada viaje.",
+    "feature1Title": "Seguridad Garantizada",
+    "feature1Desc": "Conductor responsable y atento a cada detalle",
+    "feature2Title": "Puntualidad Absoluta",
+    "feature2Desc": "Siempre a tiempo, sin excepciones ni retrasos",
+    "feature3Title": "Profesionalismo Total",
+    "feature3Desc": "Actitud ejecutiva y discreción en todos los viajes",
+    "cta": "Habla Conmigo"
+  },
+  "services": {
+    "title": "Destinos Principales",
+    "description": "Realizo transfers ejecutivos a los principales destinos de la región. Viajes personalizados según tu necesidad.",
+    "service1": "Ubatuba",
+    "service1Desc": "Costa norte paradisíaca",
+    "service2": "Paraty",
+    "service2Desc": "Destino histórico y encantador",
+    "service3": "Angra dos Reis",
+    "service3Desc": "Playas e islas increíbles",
+    "service4": "Rio de Janeiro",
+    "service4Desc": "Ciudad maravillosa",
+    "service5": "Puerto Marítimo",
+    "service5Desc": "Acceso a los puertos de la región",
+    "service6": "Aeropuertos",
+    "service6Desc": "Transfers a aeropuertos",
+    "customQuestion": "¿Tu destino no está listado?",
+    "customCta": "Solicita un Transfer Personalizado"
+  },
+  "vehicle": {
+    "title": "Mi Vehículo",
+    "subtitle": "Toyota Corolla Cross Híbrido - Comodidad y Tecnología",
+    "sectionTitle": "Comodidad Premium",
+    "feature1Title": "Tecnología Híbrida",
+    "feature1Desc": "Motor híbrido para sustentabilidad y silencio absoluto",
+    "feature2Title": "Interior Espacioso",
+    "feature2Desc": "Asientos premium con climatización y comodidad total",
+    "feature3Title": "Equipaje Amplio",
+    "feature3Desc": "Maletero generoso para tus maletas y pertenencias",
+    "feature4Title": "Seguridad Avanzada",
+    "feature4Desc": "Sistemas de seguridad de última generación"
+  },
+  "cta": {
+    "title": "¿Listo para tu próximo viaje?",
+    "description": "Contáctame ahora mismo para reservar tu transfer ejecutivo. ¡Respondo rápidamente!",
+    "whatsapp": "WhatsApp: (11) 97737-7841",
+    "email": "Correo: wdstaxi@gmail.com",
+    "hoursTitle": "Horario de Atención",
+    "hoursDays": "Lunes a Domingo",
+    "hoursAvailability": "Disponible 24 horas para tus transfers"
+  },
+  "footer": {
+    "copyright": "© 2025 Wagner Transporte Ejecutivo",
+    "tagline": "Conductor Profesional | Comodidad y Seguridad Garantizados"
+  }
+}
