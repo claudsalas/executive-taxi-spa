@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://wagner-transporte.com.br</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://wagner-transporte.com.br/images/hero_car_blurred.png</image:loc>
+      <image:title>Wagner Transporte Executivo - Toyota Corolla Cross</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wagner-transporte.com.br/images/driver_photo_blurred.png</image:loc>
+      <image:title>Wagner - Motorista Executivo Profissional</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wagner-transporte.com.br/images/car_sunset_blurred.png</image:loc>
+      <image:title>Toyota Corolla Cross - Conforto Premium</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wagner-transporte.com.br/images/car_rio_blurred.png</image:loc>
+      <image:title>Transfer Executivo Rio de Janeiro</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://wagner-transporte.com.br/images/car_side_blurred.png</image:loc>
+      <image:title>Toyota Corolla Cross - Vista Lateral</image:title>
+    </image:image>
+  </url>
+</urlset>
