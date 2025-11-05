@@ -85,3 +85,15 @@
 - [x] Create SEO-friendly URL structure
 - [x] Implement canonical tags
 - [x] Create comprehensive SEO guide document
+
+## National & International SEO Expansion (v7)
+- [x] Expand schema markup for multiple cities and airports
+- [x] Add keywords for major Brazilian airports
+- [x] Optimize for international travelers and English speakers
+- [x] Create city-specific landing pages structure
+- [x] Add hreflang tags for language/region targeting
+- [x] Update service area to cover all Brazil
+- [x] Add major airports to schema (GIG, CGH, GRU, etc)
+- [x] Optimize for "airport transfer" keywords
+- [x] Create content strategy for major cities
+- [x] Create comprehensive national SEO strategy document
