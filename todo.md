@@ -44,3 +44,14 @@
 - [x] Create GitHub Pages deployment guide
 - [x] Create comprehensive README
 - [x] Document project structure and customization
+
+## Design Improvements (v2)
+- [x] Modernize design with contemporary aesthetics
+- [x] Enhance mobile responsiveness and adaptive layout
+- [x] Make call-to-action buttons more prominent and visible
+- [x] Reposition CTA buttons for better mobile UX
+- [x] Update messaging to reflect individual driver (not fleet)
+- [x] Remove fleet references and language
+- [x] Simplify and streamline layout for better focus
+- [x] Add sticky/floating CTA for mobile
+- [x] Improve visual hierarchy
