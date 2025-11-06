@@ -3,24 +3,14 @@
 
   <head>
     <meta charset="UTF-8" />
-    <script type="text/javascript">
+    <script type="text/javascript" data-base-path="/executive-taxi-spa/">
       (function (l, script) {
+        // Keep the data-base-path attribute in sync with the Vite `base` setting.
         if (!(l.search && l.search[1] === "/")) {
           return;
         }
 
-        var basePath = (function () {
-          if (script && script.dataset && script.dataset.basePath) {
-            return script.dataset.basePath;
-          }
-
-          try {
-            return new URL(".", document.baseURI).pathname;
-          } catch (_error) {
-            return "/";
-          }
-        })();
-
+        var basePath = (script && script.dataset ? script.dataset.basePath : "/") || "/";
         var normalizedBase = basePath.endsWith("/") ? basePath : basePath + "/";
 
         var decoded = l.search
