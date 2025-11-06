@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecionando…</title>
+    <script type="text/javascript" data-base-path="/executive-taxi-spa/">
+      (function (l, script) {
+        // Keep the data-base-path attribute in sync with the Vite `base` setting.
+        var basePath = (script && script.dataset ? script.dataset.basePath : "/") || "/";
+        var normalizedBase = basePath.replace(/(^\/+|\/+?$)/g, "");
+        var pathSegmentsToKeep = normalizedBase ? normalizedBase.split("/").length : 0;
+
+        var segments = l.pathname.split("/");
+        var keep = 1 + pathSegmentsToKeep;
+        var basePrefix = segments.slice(0, keep).join("/");
+        var route = segments.slice(keep).join("/");
+
+        var newUrl =
+          l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          basePrefix +
+          "/?/" +
+          route.replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash;
+
+        l.replace(newUrl);
+      })(window.location, document.currentScript);
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/executive-taxi-spa/" />
+    </noscript>
+  </head>
+  <body></body>
+</html>
