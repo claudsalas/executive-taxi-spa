@@ -3,20 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Redirecionando…</title>
-    <script type="text/javascript">
+    <script type="text/javascript" data-base-path="/executive-taxi-spa/">
       (function (l, script) {
-        var basePath = (function () {
-          if (script && script.dataset && script.dataset.basePath) {
-            return script.dataset.basePath;
-          }
-
-          try {
-            return new URL(".", document.baseURI).pathname;
-          } catch (_error) {
-            return "/";
-          }
-        })();
-
+        // Keep the data-base-path attribute in sync with the Vite `base` setting.
+        var basePath = (script && script.dataset ? script.dataset.basePath : "/") || "/";
         var normalizedBase = basePath.replace(/(^\/+|\/+?$)/g, "");
         var pathSegmentsToKeep = normalizedBase ? normalizedBase.split("/").length : 0;
 
@@ -40,7 +30,7 @@
       })(window.location, document.currentScript);
     </script>
     <noscript>
-      <meta http-equiv="refresh" content="0; url=./" />
+      <meta http-equiv="refresh" content="0; url=/executive-taxi-spa/" />
     </noscript>
   </head>
   <body></body>
