@@ -3,6 +3,49 @@
 
   <head>
     <meta charset="UTF-8" />
+    <script type="text/javascript">
+      (function (l, script) {
+        if (!(l.search && l.search[1] === "/")) {
+          return;
+        }
+
+        var basePath = (function () {
+          if (script && script.dataset && script.dataset.basePath) {
+            return script.dataset.basePath;
+          }
+
+          try {
+            return new URL(".", document.baseURI).pathname;
+          } catch (_error) {
+            return "/";
+          }
+        })();
+
+        var normalizedBase = basePath.endsWith("/") ? basePath : basePath + "/";
+
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (segment) {
+            return segment.replace(/~and~/g, "&");
+          })
+          .join("?");
+
+        var cleanedPath = decoded.replace(/^\/+/, "");
+        var newPath = (normalizedBase === "/" ? "/" : normalizedBase) + cleanedPath;
+        if (normalizedBase !== "/" && !newPath.startsWith("/")) {
+          newPath = "/" + newPath;
+        }
+        if (normalizedBase === "/" && cleanedPath) {
+          newPath = "/" + cleanedPath;
+        }
+        if (!cleanedPath) {
+          newPath = normalizedBase === "/" ? "/" : normalizedBase;
+        }
+
+        window.history.replaceState(null, null, newPath + l.hash);
+      })(window.location, document.currentScript);
+    </script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1" />
